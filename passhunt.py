@@ -16,9 +16,6 @@ import ssl
 def logo():
 
 OPTIONS = '''
-1. List supported vendors
-2. Search Default Password
-3. Exit
 '''
 try:
     _create_unverified_https_context = ssl._create_unverified_context
