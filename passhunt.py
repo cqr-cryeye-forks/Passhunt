@@ -14,20 +14,6 @@ import bs4 as bs
 import ssl
 	
 def logo():
-	logo = '''
-  ____               _   _             _   
- |  _ \ __ _ ___ ___| | | |_   _ _ __ | |_ 
- | |_) / _` / __/ __| |_| | | | | '_ \| __|
- |  __/ (_| \__ \__ \  _  | |_| | | | | |_ 
- |_|   \__,_|___/___/_| |_|\__,_|_| |_|\__|
-	 ***523 vendors, 2084 passwords***
- ░░░░  ███████ ]▄▄▄▄▄▄▄▄          
-█▄█████████████▄█          	      Author: Viral Maniar
-[████████████████████].   	      Twitter: @ManiarViral
- ..◥ ▲ ▲ ▲ ▲ ▲ ▲ ◤..      	      Description: This tool is to search default credentials for routers, network devices, web applications and more. 
-								  
- '''
-	return logo
 
 OPTIONS = '''
 1. List supported vendors
