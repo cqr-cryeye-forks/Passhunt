@@ -15,7 +15,7 @@ import ssl
 	
 def logo():
 	logo = ''''''
-        return logo
+	return logo
 
 OPTIONS = '''
 1. List supported vendors
