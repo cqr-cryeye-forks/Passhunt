@@ -166,7 +166,7 @@ def parse_vendor_info(data: str) -> list:
             for tr_ in tr:
                 tds = tr_.find_all('td')
                 info.update({
-                    tds[0].text.lower().strip(): tds[1].text.strip()
+                    tds[0].text.lower().strip().replace(" ", "_"): tds[1].text.strip()
                 })
             output.append(info)
         except Exception:
