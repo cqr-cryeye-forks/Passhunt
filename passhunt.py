@@ -155,12 +155,12 @@ def run_nmap(host: str) -> list:
         exit(1)
 
 
-def parse_vendor_info(data: str) -> list:
+def parse_vendor_info(data: str, service: str) -> list:
     output = []
     soup = bs.BeautifulSoup(data, 'html.parser')
     table = soup.find_all('table')
     for item in table:
-        info = {}
+        info = {"service": service.title()}
         tr = item.find_all('tr')[1:]
         try:
             for tr_ in tr:
@@ -181,7 +181,7 @@ def get_info(vendor: str) -> list:
         print("failed to retrieve vendors from cirt.net, exiting...")
         exit(1)
 
-    return parse_vendor_info(resp.content.decode('utf-8'))
+    return parse_vendor_info(resp.content.decode('utf-8'), vendor)
 
 
 def main():
